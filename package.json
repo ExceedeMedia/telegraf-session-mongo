@@ -1,13 +1,21 @@
 {
   "name": "telegraf-session-mongo",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "MongoDB Session driver for Telegraf",
   "main": "lib/session.js",
   "repository": "git@github.com:ExceedeMedia/telegraf-session-mongo.git",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["telegraf", "telegraf-session", "mongodb", "session", "middleware", "telegram", "telegram-bot"],
+  "keywords": [
+    "telegraf",
+    "telegraf-session",
+    "mongodb",
+    "session",
+    "middleware",
+    "telegram",
+    "telegram-bot"
+  ],
   "author": "Vasili Sviridov <vasili@sviridov.ca>",
   "license": "MIT",
   "engines": {
@@ -17,6 +25,7 @@
     "lib/session.js"
   ],
   "dependencies": {
-    "debug": "^2.6.0"
+    "debug": "^2.6.0",
+    "deep-equal": "^1.0.1"
   }
 }
