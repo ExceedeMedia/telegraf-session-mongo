@@ -32,7 +32,7 @@ const app = new Telegraf(process.env.BOT_TOKEN);
 MongoClient.connect(process.env.MONGO_URL).then(client => {
 
         const session = new MongoSession(client, {
-            // tll - in milliseconds
+            // ttl - in milliseconds
             // property - name of the context property for the session (default: session)
             // collection - name of the mongodb collection for the sessions (default: sessions)
             // getSessionKey - function (ctx) => String (default "chatId:fromId")
@@ -41,10 +41,10 @@ MongoClient.connect(process.env.MONGO_URL).then(client => {
         // Setup function creates necessary indexes for ttl and key lookup
         session.setup().then(() => {
             app.use(session.middleware);
-        });
 
-        app.command("session", (ctx) => {
-            ctx.respondWithHTML(`<pre>${ctx.session, null, 2}</pre>`);
+            app.command("session", (ctx) => {
+                ctx.respondWithHTML(`<pre>${ctx.session, null, 2}</pre>`);
+            });
         });
 });
 ```
