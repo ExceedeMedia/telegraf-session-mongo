@@ -49,13 +49,6 @@ MongoClient.connect(process.env.MONGO_URL).then(client => {
 });
 ```
 
-Due to the `upsert`-ey nature of mongo, if you delete items from storage - provide an `$unset`
-
-```js
-ctx.session['$unset'] = {[token]: ''};
-delete ctx.session[token];
-```
-
 Postscriptum
 ------------
 
