@@ -1,6 +1,6 @@
 {
   "name": "telegraf-session-mongo",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "MongoDB Session driver for Telegraf",
   "main": "lib/session.js",
   "repository": "git@github.com:ExceedeMedia/telegraf-session-mongo.git",
